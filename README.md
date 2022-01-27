@@ -9,6 +9,16 @@ This repository contains the necessary scripts and source code to build the Sher
 - Apache MAven verison : 3.6.3
 - Gzoltar sherlock version maven plugin version 1.7.3-SHERLOCk on local maven repository (i.e. installation procedure described bellow)
 
+### Gzoltar-sherlock plugin instalation
+
+To be able to specify flaky tests during gzoltar report generation we have modified the existing code to allow the specification of such failing tests. The code is provided as a maven project in th `sherlock-gzoltar-plugin` folder.
+To install the plugin please use the following command at the root of the `sherlock-gzoltar-plugin` directory.
+
+``mvn clean install -DskipTests``
+
+Some error about javadoc command might be shown but the overall build of the plugin eventual succeed.
+
+
 ## Structure
 
 
