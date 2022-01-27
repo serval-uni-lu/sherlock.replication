@@ -6,7 +6,7 @@ This repository contains the necessary scripts and source code to build the Sher
 
 ### Run
 - Java version : `8 Update 2xx` with `JAVA_HOME` environment variable set and pointing to the JDK
-- Apache MAven verison : 3.6.3
+- Apache Maven verison : 3.6.3
 - Gzoltar sherlock version maven plugin version 1.7.3-SHERLOCk on local maven repository (i.e. installation procedure described bellow)
 
 ### Gzoltar-sherlock plugin instalation
@@ -16,10 +16,16 @@ To install the plugin please use the following command at the root of the `sherl
 
 ``mvn clean install -DskipTests``
 
-Some error about javadoc command might be shown but the overall build of the plugin eventual succeed.
+Some error about javadoc command might be shown but the overall build of the plugin eventually succeed.
 
 
 ## Structure
+
+
+## Run experiments
+The experiments subject consist of 5 projects from which we analyse between 3 and 14 commits.
+
+Each experiments (i.e. a commit of a project ) starts by checking out the parent commit (i.e. prior the patch).
 
 
 
