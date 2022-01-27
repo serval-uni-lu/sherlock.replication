@@ -16,7 +16,7 @@ To install the plugin please use the following command at the root of the `sherl
 
 ``mvn clean install -DskipTests``
 
-Some error about javadoc command might be shown but the overall build of the plugin eventually succeed.
+Some error about javadoc command might be shown but the overall build of the plugin eventually succeeds.
 
 
 ## Structure
