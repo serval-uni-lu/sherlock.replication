@@ -1,5 +1,5 @@
-# Sherlock replication package
-This repository contains the necessary scripts and source code to build the Sherloc-Gzoltar mven plugin, the scripts used to run the experiment for each projects and the results presented in _Identifying non-Deterministic Software Components_
+# ISSTA 2022 replication package
+This repository contains the necessary scripts and source code to build the Gzoltar maven plugin, the scripts used to run the experiment for each projects and the results presented in _Identifying non-Deterministic Software Components_
 ## Requirements
 ### Data extraction
 - `unzip`
@@ -7,12 +7,12 @@ This repository contains the necessary scripts and source code to build the Sher
 ### Run
 - Java version : `8 Update 2xx` with `JAVA_HOME` environment variable set and pointing to the JDK
 - Apache Maven verison : 3.6.3
-- Gzoltar sherlock version maven plugin version 1.7.3-SHERLOCk on local maven repository (i.e. installation procedure described bellow)
+- Gzoltar version maven plugin version 1.7.3-SHERLOCk on local maven repository (i.e. installation procedure described bellow)
 
-### Gzoltar-sherlock plugin instalation
+### Gzoltar plugin installation
 
-To be able to specify flaky tests during gzoltar report generation we have modified the existing code to allow the specification of such failing tests. The code is provided as a maven project in th `sherlock-gzoltar-plugin` folder.
-To install the plugin please use the following command at the root of the `sherlock-gzoltar-plugin` directory.
+To be able to specify flaky tests during gzoltar report generation we have modified the existing code to allow the specification of such failing tests. The code is provided as a maven project in th `gzoltar-plugin` folder.
+To install the plugin please use the following command at the root of the `gzoltar-plugin` directory.
 
 ``mvn clean install -DskipTests``
 
@@ -28,7 +28,9 @@ Some error about javadoc command might be shown but the overall build of the plu
 ## Structure
 - `projects/{project}` : contains the commit used for the experiments and he experimental results.
 - `projects/{project}/{commit.id}/` : contains the SBFL reports after running the tests on `{commit.id}`. For some projects the modified `pom.xml` is present.
-- `sherlock-gzoltar-plugin` : contains the _maven_ gzoltar project modified to suits our experiments.  
+- `gzoltar-plugin` : contains the _maven_ gzoltar project modified to suits our experiments.
+- `data-collection` : contains scripts used for searching projects and flaky fixing commits.
+- `static-metrics` : contains scripts used to compute and analyse static metrics.
 
 ## Run experiments
 The experiments subject consist of 5 projects from which we analyse between 3 and 14 commits.
