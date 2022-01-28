@@ -32,7 +32,7 @@ The experiments subject consist of 5 projects from which we analyse between 3 an
 
 Each experiments (i.e. a commit of a project ) starts by checking out the parent commit (i.e. prior the patch).
  With `{project}` the analyzed project, `{project.fix.commitId}` the commit id containing the flakyTest patch.
-``
+```
 mkdir {project} 
 cd {project}
 git clone {project.git.url} {project.base}
@@ -41,10 +41,10 @@ cp -r {project.base} {project.fix.commitId}
 cd {project.fix.commitId};
 git checkout {project.fix.commitId};
 git checkout HEAD^;
-``
+```
 Then the Plugin in should be put into the build definition script `pom.xml` of the target commit.
 
-``xml
+```xml
 <plugins>
 ...
 <plugin>
@@ -62,15 +62,17 @@ Then the Plugin in should be put into the build definition script `pom.xml` of t
 </plugin>
 ...
 </plugins>
-``
+```
 
 Please not that if surefire is used, a fork count of at least `3` must be used `<forkCount>3</forkCount>` also the plugin listner should be put into the surefire listener configuration :
 
-``
+```
 <property>
         <name>listener</name>
         <value>com.gzoltar.internal.core.listeners.JUnitListener</value>
         OR
         <value>com.gzoltar.internal.core.listeners.TestNGListener</value>
 </property>
-``
+```
+
+
