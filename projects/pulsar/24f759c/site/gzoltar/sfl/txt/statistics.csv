@@ -1,0 +1,13 @@
+formula,metric_name,metric_value
+barinel,density,0.006279972596483215
+barinel,uniqueness,0.04218635363169479
+barinel,entropy_barinel,2.1904180631874005E-4
+dstar,density,0.006279972596483215
+dstar,uniqueness,0.04218635363169479
+dstar,entropy_dstar,84.21525204604995
+ochiai,density,0.006279972596483215
+ochiai,uniqueness,0.04218635363169479
+ochiai,entropy_ochiai,88.75382302974378
+tarantula,density,0.006279972596483215
+tarantula,uniqueness,0.04218635363169479
+tarantula,entropy_tarantula,2.3398470893909007

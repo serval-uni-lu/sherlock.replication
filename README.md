@@ -24,8 +24,10 @@ Some error about javadoc command might be shown but the overall build of the plu
 - Ignite : `git@github.com:apache/ignite.git`
 - Neo4j : `git@github.com:neo4j/neo4j.git`
 - Pulsar : `git@github.com:apache/pulsar.git`
-## Structure
 
+## Structure
+- `projects/{project}` : contains the commit used for the experiments and he experimental results.
+- `sherlock-gzoltar-plugin` : contains the _maven_ gzoltar project modified to suits our experiments.  
 
 ## Run experiments
 The experiments subject consist of 5 projects from which we analyse between 3 and 14 commits.
