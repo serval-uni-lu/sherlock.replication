@@ -66,13 +66,30 @@ Then the Plugin in should be put into the build definition script `pom.xml` of t
 
 Please not that if surefire is used, a fork count of at least `3` must be used `<forkCount>3</forkCount>` also the plugin listner should be put into the surefire listener configuration :
 
-```
+```xml
 <property>
-        <name>listener</name>
-        <value>com.gzoltar.internal.core.listeners.JUnitListener</value>
-        OR
-        <value>com.gzoltar.internal.core.listeners.TestNGListener</value>
+  <name>listener</name>
+    <value>com.gzoltar.internal.core.listeners.JUnitListener</value>
+    OR
+    <value>com.gzoltar.internal.core.listeners.TestNGListener</value>
 </property>
 ```
 
+A file containing the flakytest owning class and test name must also be present at the root of the project e.g.
 
+```
+touch flaky.txt
+echo FlakyTestClass#flakyTest > flaky.txt
+```
+
+Then the build can be run using the appropriate command
+```
+mvn clean install {maven opts} ... -fn  -Dgzoltar.flakyTestList=$PWD/flaky.txt
+```
+After the test execution, the report containing the different results can me obtain with 
+
+```
+mvn gzoltar:fl-report -Dgzoltar.granularity=class -fn -U -Dgzoltar.outputDirectory=$PWD/site-class
+```
+
+The coefficients of the instrumented class are available under `site-class/sfl/txt/*.csv`
