@@ -27,6 +27,7 @@ Some error about javadoc command might be shown but the overall build of the plu
 
 ## Structure
 - `projects/{project}` : contains the commit used for the experiments and he experimental results.
+- `projects/{project}/{commit.id}/` : contains the SBFL reports after running the tests on `{commit.id}`. For some projects the modified `pom.xml` is present.
 - `sherlock-gzoltar-plugin` : contains the _maven_ gzoltar project modified to suits our experiments.  
 
 ## Run experiments
