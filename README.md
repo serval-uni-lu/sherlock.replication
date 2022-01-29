@@ -1,5 +1,10 @@
-# ISSTA 2022 replication package
-This repository contains the necessary scripts and source code to build the Gzoltar maven plugin, the scripts used to run the experiment for each projects and the results presented in _Identifying non-Deterministic Software Components_
+# ISSTA 2022 replication package : What Made This Test Flake? Pinpointing Classes Responsible for Test Flakiness
+This repository contains thenecessary resource for replicating submission #370. It includes:
+- The projects and commits used in our study;
+- The necessary scripts and source code to build the Gzoltar maven plugin;
+- The scripts used to run experiments;
+- And the results. 
+
 ## Requirements
 ### Data extraction
 - `unzip`
