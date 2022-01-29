@@ -37,6 +37,8 @@ Some error about javadoc command might be shown but the overall build of the plu
 - `gzoltar-plugin` : contains the _maven_ gzoltar project modified to suits our experiments.
 - `data-collection` : contains scripts used for searching projects and flaky fixing commits.
 - `static-metrics` : contains scripts used to compute and analyse static metrics.
+- `change-metrics` : contains scirpts used to compute change metrics and combine all static, change, and sbfl metrics.
+- `model-generation` : contains scripts to train GP-based models, perform the model voting, and compute DDU scores. 
 
 ## Run experiments
 The experiments subject consist of 5 projects from which we analyse between 3 and 14 commits.
