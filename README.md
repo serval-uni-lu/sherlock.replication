@@ -1,5 +1,6 @@
-# ISSTA 2022 replication package : What Made This Test Flake? Pinpointing Classes Responsible for Test Flakiness
-This repository contains thenecessary resource for replicating submission #370. It includes:
+# What Made This Test Flake? Pinpointing Classes Responsible for Test Flakiness: Replication package
+
+This repository contains the necessary resources for replicating the ISSTA submission #370. It includes:
 - The projects and commits used in our study;
 - The necessary scripts and source code to build the Gzoltar maven plugin;
 - The scripts used to run experiments;
