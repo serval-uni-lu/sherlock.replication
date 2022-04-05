@@ -1,6 +1,6 @@
 # What Made This Test Flake? Pinpointing Classes Responsible for Test Flakiness: Replication package
 
-This repository contains the necessary resources for replicating the ISSTA submission #370. It includes:
+This repository contains the necessary resources for replicating the ICSME submission #108. It includes:
 - The projects and commits used in our study;
 - The necessary scripts and source code to build the Gzoltar maven plugin;
 - The scripts used to run experiments;
