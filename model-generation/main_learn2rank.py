@@ -156,7 +156,7 @@ def evaluate(project, mdl_algo, mdl, mdl_file, test_targets, datafile, dest, eva
                 mdl = outs[0]
 
         data_per_fault, cands_per_fault, labels_per_fault = get_data_per_fault(
-            project, datafile, target_faults = test_targets, delimiter = ",", per_fault = True)
+            project, datafile, target_faults = test_targets, delimiter = ",")
 
         if saving:
             os.makedirs(dest, exist_ok = True)
@@ -200,7 +200,7 @@ def select_mdl(project, mdl_algo, mdl_dir, datafile_or_dir, iter_num, data_folds
         test_and_train_targets = get_train_and_test(data_folds, fold_idx)
         test_targets = test_and_train_targets['test']
         data_per_fault, _, labels_per_fault = get_data_per_fault(
-            project, datafile_or_dir, target_faults = test_targets, delimiter = ",", per_fault = True)
+            project, datafile_or_dir, target_faults = test_targets, delimiter = ",")
 
         mdls_with_fitness = []
         for iter_idx in range(iter_num):
